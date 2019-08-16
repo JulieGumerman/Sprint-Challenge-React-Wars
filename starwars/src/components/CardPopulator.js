@@ -14,6 +14,7 @@ const CardPopulator = () => {
     console.log("Hi");
 
     const [characters, setCharacters] = useState([]);
+    const [charactersMore, setCharactersMore] = useState([]);
     useEffect(()=>{
         axios.get("https://swapi.co/api/people")
         .then(response => {
@@ -23,6 +24,14 @@ const CardPopulator = () => {
         }) //close "then"
     }, []);
 
+    useEffect(() => {}, [
+        axios.get("https://swapi.co/api/people/?page=2")
+        .then(response => {
+            let charactersMore = response.data.results;
+            setCharactersMore(charactersMore);
+        })
+    ]);
+
 
     return (
         <ContainerDiv>
@@ -31,6 +40,13 @@ const CardPopulator = () => {
                     <CardMaker key={character.height} character={character}/>
                 )
             })}
+            {
+                charactersMore.map(character => {
+                    return(
+                        <CardMaker key={character.mass} character={character} />
+                    )
+                })
+            }
         </ContainerDiv>
     )
 }
