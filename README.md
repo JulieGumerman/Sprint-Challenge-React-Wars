@@ -24,29 +24,39 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+- [x] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-- [ ] What does it mean to _think_ in react?
+*React is a JavaScript framework that allows you to build content, style, and user interactivity all in the same screen. It is designed to be responsive to users: It makes it so, if a user clicks a button or an option, only the affected part of the DOM changes. The whole thing doesn't need to reload. It is also designed to make developers' lives easier, allowing them to reuse code over and over, not to mention making it easier to create new pieces without the developer needing to touch a button. (Think new users or new items.)*
 
-- [ ] Describe state.
+- [x] What does it mean to _think_ in react?
+*In React, you want your individual pieces to be "dumb" so they will be more responsive to changes in their parent elements. Then, you want your surrounding code to be "smart" to create the required outcome out of those individual pieces.*
 
-- [ ] Describe props.
+- [x] Describe state.
 
-- [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+*"State" defines the basic information or set of information you are working with. It goes at the beginning of your code because it allows you to set your state (basic information) as you go. With an API, you will use state to grab your data, whereas if you are making a "to do" app, your state will be the basic skeleton of what a "to do" note might look like.*
+
+- [X] Describe props.
+
+*"Props" are a parameter/argument that allow data to be passed from a parent element to a child element. If you include props, the code knows to check the parent item for that missing piece of information.*
+
+- [x] What are side effects, and how do you sync effects in a React component to state or prop changes?
+*Side effects involve code in a block unintentionally (and sometimes undesirably) affecting the code outside the block. This can lead to inconsistent or unintended results from code that is otherwise properly worded. To make your code "pure" (no side effects), you have to wrap your code in `useEffect` to cancel out unintentional effects.*
+
+
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
-- [ ] Change directories into `./starwars` (`cd starwars`) and run `yarn install` or `npm install` to retrieve all needed dependencies.
-- [ ] Once you have installed the _node_modules_, run `yarn start` or `npm start` to get your server up and running.
-- [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [x] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [x] Change directories into `./starwars` (`cd starwars`) and run `yarn install` or `npm install` to retrieve all needed dependencies.
+- [x] Once you have installed the _node_modules_, run `yarn start` or `npm start` to get your server up and running.
+- [x] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
 Follow these steps for completing your project.
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
+- [] Implement the project on this Branch, **committing progress & changes often.**
 - [ ] Push commits: `git push origin <firstName-lastName>`.
 
 Follow these steps for completing your project:
