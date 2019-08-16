@@ -1,7 +1,14 @@
 import React, { useState, useEffect} from "react";
-import { Container, Grid } from "semantic-ui-react";
 import axios from "axios";
 import CardMaker from "./CardMaker"
+import styled from "styled-components";
+
+let ContainerDiv=styled.div`
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;`
 
 const CardPopulator = () => {
     console.log("Hi");
@@ -18,17 +25,13 @@ const CardPopulator = () => {
 
 
     return (
-        <Container>
-            <Grid divided="vertically">
-                <Grid.Row padded columns={3}>
+        <ContainerDiv>
             {characters.map(character => {
                 return (
                     <CardMaker key={character.height} character={character}/>
                 )
             })}
-            </Grid.Row>
-            </Grid>
-        </Container>
+        </ContainerDiv>
     )
 }
 
