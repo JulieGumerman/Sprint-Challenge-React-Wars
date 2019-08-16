@@ -24,13 +24,12 @@ const CardPopulator = () => {
         }) //close "then"
     }, []);
 
-    useEffect(() => {}, [
+    useEffect(() => {
         axios.get("https://swapi.co/api/people/?page=2")
-        .then(response => {
-            let charactersMore = response.data.results;
-            setCharactersMore(charactersMore);
-        })
-    ]);
+            .then(response => {
+                let charactersMore = response.data.results;
+                setCharactersMore(charactersMore);
+    })}, []);
 
 
     return (
